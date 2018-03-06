@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="cityking">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="python时间与日期"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="python &amp;&amp; django"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://cityking.github.io/hexo_project"/>
+  
+    <link rel="alternate" href="/atom.xml" title="python &amp;&amp; django" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>python && django</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/hexo_project/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/hexo_project/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/hexo_project//img/background.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">python时间与日期</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/hexo_project/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/hexo_project/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/cityking">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:<154443603@qq.com>">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By cityking</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2018-03-06</span>
+            <span class="time">18:04:37</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/hexo_project/categories/python/">python</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/hexo_project/tags/python/">#python</a> <a class="tag" href="/hexo_project/tags/time/">#time</a> <a class="tag" href="/hexo_project/tags/datetime/">#datetime</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>使用python处理日期和时间的方法简介<br><a id="more"></a></p>
+<h1 id="datetime模块"><a href="#datetime模块" class="headerlink" title="datetime模块"></a>datetime模块</h1><h2 id="datetime-date：表示日期的类"><a href="#datetime-date：表示日期的类" class="headerlink" title="datetime.date：表示日期的类"></a>datetime.date：表示日期的类</h2><p>date类有三个参数,datetime.date(year,month,day)，返回year-month-day<br>1.datetime.date.ctime(),返回字符串格式如 Sun Apr 16 00:00:00 2017<br>2.datetime.date.fromtimestamp(timestamp),根据给定的时间戮，返回一个date对象；datetime.date.today()作用相同<br>3.datetime.date.isocalendar():返回格式如(year，week_number，week_day)的元组,(2017, 15, 6)<br>4.datetime.date.isoformat()：返回格式如YYYY-MM-DD<br>5.datetime.date.isoweekday()：返回给定日期的星期（0-6），星期日=0，星期日=6<br>6.datetime.date.replace(year,month,day)：替换给定日期，但不改变原日期<br>7.datetime.date.strftime(format):把日期时间按照给定的format进行格式化。<br>8.datetime.date.timetuple()：返回日期对应的time.struct_time对象<br><code>time.struct_time(tm_year=2017, tm_mon=4, tm_mday=15, tm_hour=0, tm_min=0, tm_sec=0, tm_wday=5, tm_yday=105, tm_isdst=-1)</code><br>9.datetime.date.weekday()：返回日期的星期（0-6），星期一=0，星期日=6</p>
+<h2 id="datetime-time：表示时间的类"><a href="#datetime-time：表示时间的类" class="headerlink" title="datetime.time：表示时间的类"></a>datetime.time：表示时间的类</h2><p>time类有5个参数，datetime.time(hour,minute,second,microsecond,tzoninfo),返回08:29:30<br>1.datetime.time.replace()<br>2.datetime.time.strftime(format):按照format格式返回时间</p>
+<h2 id="datetime-datetime：表示日期时间的类"><a href="#datetime-datetime：表示日期时间的类" class="headerlink" title="datetime.datetime：表示日期时间的类"></a>datetime.datetime：表示日期时间的类</h2><p>datetime类有很多参数，datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])，返回年月日，时分秒<br>datetime.datetime.ctime()<br>datetime.datetime.now().date()：返回当前日期时间的日期部分<br>datetime.datetime.now().time()：返回当前日期时间的时间部分<br>datetime.datetime.fromtimestamp()<br>datetime.datetime.now()：返回当前系统时间<br>datetime.datetime.replace()<br>datetime.datetime.strftime()：由日期格式转化为字符串格式<br><code>datetime.datetime.now().strftime(&#39;%b-%d-%Y %H:%M:%S&#39;)
+　　&#39;Apr-16-2017 21:01:35&#39;</code><br>datetime.datetime.strptime():由字符串格式转化为日期格式<br><code>datetime.datetime.strptime(&#39;Apr-16-2017 21:01:35&#39;, &#39;%b-%d-%Y %H:%M:%S&#39;)
+2017-04-16 21:01:35</code></p>
+<h2 id="datetime-timedelta：表示时间间隔，即两个时间点的间隔"><a href="#datetime-timedelta：表示时间间隔，即两个时间点的间隔" class="headerlink" title="datetime.timedelta：表示时间间隔，即两个时间点的间隔"></a>datetime.timedelta：表示时间间隔，即两个时间点的间隔</h2><p>datetime.datetime.timedelta用于计算两个日期之间的差值，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; a=datetime.datetime.now()</span><br><span class="line">&gt;&gt;&gt; b=datetime.datetime.now()</span><br><span class="line">&gt;&gt;&gt; a</span><br><span class="line">&gt;&gt;&gt; datetime.datetime(2017, 4, 16, 21, 21, 20, 871000)</span><br><span class="line">&gt;&gt;&gt; b</span><br><span class="line">&gt;&gt;&gt; datetime.datetime(2017, 4, 16, 21, 21, 29, 603000)</span><br><span class="line">&gt;&gt;&gt; b-a</span><br><span class="line">&gt;&gt;&gt; datetime.timedelta(0, 8, 732000)</span><br><span class="line">&gt;&gt;&gt; (b-a).seconds</span><br><span class="line">&gt;&gt;&gt; 8</span><br></pre></td></tr></table></figure></p>
+<p>或者<br><code>time1 = datetime.datetime(2016, 10, 20)
+time2 = datetime.datetime(2015, 11, 2)</code><br>“””计算天数差值”””<br><code>print(time1-time2).days</code><br>“””计算两个日期之间相隔的秒数”””<br><code>print (time1-time2).total_seconds()</code></p>
+<p><a href="https://docs.python.org/3.6/library/datetime" target="_blank" rel="noopener">官方文档:https://docs.python.org/3.6/library/datetime</a></p>
+<h1 id="time模块"><a href="#time模块" class="headerlink" title="time模块"></a>time模块</h1><h2 id="time-time-获取当前时间戳"><a href="#time-time-获取当前时间戳" class="headerlink" title="time.time() 获取当前时间戳"></a>time.time() 获取当前时间戳</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/python</span><br><span class="line"># -*- coding: UTF-8 -*-</span><br><span class="line"></span><br><span class="line">import time;  # 引入time模块</span><br><span class="line"></span><br><span class="line">ticks = time.time()</span><br><span class="line">	print &quot;当前时间戳为:&quot;, ticks</span><br></pre></td></tr></table></figure>
+<p>输出<br><code>当前时间戳为: 1459994552.51</code></p>
+<h2 id="time-localtime-时间戳转成本地时间"><a href="#time-localtime-时间戳转成本地时间" class="headerlink" title="time.localtime() 时间戳转成本地时间"></a>time.localtime() 时间戳转成本地时间</h2><pre><code>当传入时间戳时则把时间戳转化成本地时间，当参数为空时则返回当前时间
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/python</span><br><span class="line"># -*- coding: UTF-8 -*-</span><br><span class="line"></span><br><span class="line">import time</span><br><span class="line"></span><br><span class="line">localtime = time.localtime(time.time())</span><br><span class="line">	print &quot;本地时间为 :&quot;, localtime</span><br></pre></td></tr></table></figure>
+<p>输出<br><code>本地时间为 : time.struct_time(tm_year=2016, tm_mon=4, tm_mday=7, tm_hour=10, tm_min=3, tm_sec=27, tm_wday=3, tm_yday=98, tm_isdst=0)</code></p>
+<h2 id="time-asctime-格式化时间"><a href="#time-asctime-格式化时间" class="headerlink" title="time.asctime() 格式化时间"></a>time.asctime() 格式化时间</h2><pre><code>传入参数为本地时间， 当传入参数为空时，为获取当前格式化时间
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/python</span><br><span class="line"># -*- coding: UTF-8 -*-</span><br><span class="line"></span><br><span class="line">import time</span><br><span class="line"></span><br><span class="line">localtime = time.asctime( time.localtime(time.time()) )</span><br><span class="line">	print &quot;本地时间为 :&quot;, localtime</span><br></pre></td></tr></table></figure>
+<p>输出<br><code>本地时间为 : Thu Apr  7 10:05:21 2016</code></p>
+<h2 id="时间转字符串"><a href="#时间转字符串" class="headerlink" title="时间转字符串"></a>时间转字符串</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/python</span><br><span class="line"># -*- coding: UTF-8 -*-</span><br><span class="line"></span><br><span class="line">import time</span><br><span class="line"></span><br><span class="line"># 格式化成2016-03-20 11:45:39形式</span><br><span class="line">print time.strftime(&quot;%Y-%m-%d %H:%M:%S&quot;, time.localtime()) </span><br><span class="line"></span><br><span class="line"># 格式化成Sat Mar 28 22:24:24 2016形式</span><br><span class="line">print time.strftime(&quot;%a %b %d %H:%M:%S %Y&quot;, time.localtime()) </span><br><span class="line">  </span><br><span class="line"># 将格式字符串转换为时间戳</span><br><span class="line">a = &quot;Sat Mar 28 22:24:24 2016&quot;</span><br><span class="line">print time.mktime(time.strptime(a,&quot;%a %b %d %H:%M:%S %Y&quot;))</span><br></pre></td></tr></table></figure>
+<p>输出<br><code>2016-04-07 10:25:09
+Thu Apr 07 10:25:09 2016
+1459175064.0</code></p>
+<p>python中时间日期格式化符号：</p>
+<ul>
+<li>%y 两位数的年份表示（00-99）</li>
+<li>%Y 四位数的年份表示（000-9999）</li>
+<li>%m 月份（01-12）</li>
+<li>%d 月内中的一天（0-31）</li>
+<li>%H 24小时制小时数（0-23）</li>
+<li>%I 12小时制小时数（01-12）</li>
+<li>%M 分钟数（00=59）</li>
+<li>%S 秒（00-59）</li>
+<li>%a 本地简化星期名称</li>
+<li>%A 本地完整星期名称</li>
+<li>%b 本地简化的月份名称</li>
+<li>%B 本地完整的月份名称</li>
+<li>%c 本地相应的日期表示和时间表示</li>
+<li>%j 年内的一天（001-366）</li>
+<li>%p 本地A.M.或P.M.的等价符</li>
+<li>%U 一年中的星期数（00-53）星期天为星期的开始</li>
+<li>%w 星期（0-6），星期天为星期的开始</li>
+<li>%W 一年中的星期数（00-53）星期一为星期的开始</li>
+<li>%x 本地相应的日期表示</li>
+<li>%X 本地相应的时间表示</li>
+<li>%Z 当前时区的名称</li>
+<li>%% %号本身<br><a href="https://docs.python.org/3.6/library/time.html" target="_blank" rel="noopener">官方文档:ihttps://docs.python.org/3.6/library/time.html</a></li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/hexo_project/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

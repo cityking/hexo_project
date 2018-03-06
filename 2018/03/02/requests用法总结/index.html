@@ -8,10 +8,10 @@
   <meta name="description" content="">
   <meta name="author" content="cityking">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="python &amp;&amp; django"/>
+  <meta property="og:title" content="python requests用法总结"/>
   <meta property="og:description" content="" />
   <meta property="og:site_name" content="python &amp;&amp; django"/>
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
   <meta property="og:image" content="https://cityking.github.io/hexo_project"/>
   
     <link rel="alternate" href="/atom.xml" title="python &amp;&amp; django" type="application/atom+xml">
@@ -43,7 +43,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">python &amp;&amp; django</p>
+          <p class="title">python requests用法总结</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -88,92 +88,50 @@
   </div>
 </header>
 
-<!-- Home Page Post List -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-10 col-md-10 col-md-offset-1">
-      
-        <div class="post-item-wrapper">
-  <a href="/hexo_project/2018/03/06/python时间与日期/" class="post-title">
-      python时间与日期
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2018-03-06</div>
-      <div class="categories">
-        
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
           
+            <!-- Author -->
+            <span class="author info">By cityking</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2018-03-02</span>
+            <span class="time">18:04:37</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
 
 <a href="/hexo_project/categories/python/">python</a>
-
+</span>
+          
+        </div>
+        <!-- Tags -->
         
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/hexo_project/tags/python/">#python</a> <a class="tag" href="/hexo_project/tags/requests/">#requests</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>requests是一个很实用的Python HTTP客户端库，编写爬虫和测试服务器响应数据时经常会用到<br><a id="more"></a><br><a href="http://docs.python-requests.org/en/master/" target="_blank" rel="noopener">官方网址：http://docs.python-requests.org/en/master/</a></p>
+<p>安装方式一般采用$ pip install requests</p>
+<h1 id="GET请求"><a href="#GET请求" class="headerlink" title="GET请求"></a>GET请求</h1><p><code>r  = requests.get(&#39;http://httpbin.org/get&#39;)</code><br>传参<br><code>payload = {&#39;key1&#39;: &#39;value1&#39;, &#39;key2&#39;: &#39;value2&#39;, &#39;key3&#39;: None}
+r = requests.get(&#39;http://httpbin.org/get&#39;, params=payload)</code></p>
+<h1 id="POST请求"><a href="#POST请求" class="headerlink" title="POST请求"></a>POST请求</h1><h1 id="高级特性"><a href="#高级特性" class="headerlink" title="高级特性"></a>高级特性</h1><h1 id="SSL证书验证"><a href="#SSL证书验证" class="headerlink" title="SSL证书验证"></a>SSL证书验证</h1><h1 id="响应体内容工作流"><a href="#响应体内容工作流" class="headerlink" title="响应体内容工作流"></a>响应体内容工作流</h1><h1 id="Keep-Alive"><a href="#Keep-Alive" class="headerlink" title="Keep-Alive"></a>Keep-Alive</h1><h1 id="流式上传"><a href="#流式上传" class="headerlink" title="流式上传"></a>流式上传</h1><h1 id="分块传输编码"><a href="#分块传输编码" class="headerlink" title="分块传输编码"></a>分块传输编码</h1><h1 id="POST-Multiple-Multipart-Encoded-Files"><a href="#POST-Multiple-Multipart-Encoded-Files" class="headerlink" title="POST Multiple Multipart-Encoded Files"></a>POST Multiple Multipart-Encoded Files</h1><h1 id="Custom-Authentication"><a href="#Custom-Authentication" class="headerlink" title="Custom Authentication"></a>Custom Authentication</h1><h1 id="流式请求"><a href="#流式请求" class="headerlink" title="流式请求"></a>流式请求</h1><h1 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h1>
+        </div>
       </div>
     </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo"><p>使用python处理日期和时间的方法简介<br></div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/hexo_project/tags/python/">python</a> <a class="tag" href="/hexo_project/tags/time/">time</a> <a class="tag" href="/hexo_project/tags/datetime/">datetime</a>
-
-
-      
-    </div>
   </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/hexo_project/2018/03/02/requests用法总结/" class="post-title">
-      python requests用法总结
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2018-03-02</div>
-      <div class="categories">
-        
-          
-
-<a href="/hexo_project/categories/python/">python</a>
-
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo"><p>requests是一个很实用的Python HTTP客户端库，编写爬虫和测试服务器响应数据时经常会用到<br></div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/hexo_project/tags/python/">python</a> <a class="tag" href="/hexo_project/tags/requests/">requests</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-    </div>
-  </div>
-</div>
-
-<!-- Pagination -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-10 col-md-10 col-md-offset-1">
-      <ul class="pagination">
-          
-          
-      </ul>
-    </div>
-  </div>
-</div>
+</article>
 
 
 
